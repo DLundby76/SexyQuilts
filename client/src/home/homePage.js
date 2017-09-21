@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import Carousel from '../components/carouselComponent/index.js';
+import Footer from '../components/footer/index.js';
+import logo from '../logo.svg';
 
-var customStyle = {
-  color: 'black',
+var homeStyles = {
+  backgroundColor: 'blue',
 
 }
+
 class Home extends Component {
     constructor(props){
       super(props);
@@ -21,8 +25,17 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <p style={customStyle}>Hello From component 2</p>
-        <p style={customStyle}>Another P tag</p>
+        <div  className="jumbotron" style={homeStyles}>
+          <img src={logo} className="App-logo" alt="logo" />
+          <h2>Welcome to sexy quilt bitches! Boo yaaaa</h2>
+        </div>
+        {this.state.users.map(user =>
+        <div key={user.id}>
+          {user.username}
+
+        </div>)}
+        <Carousel />
+        <Footer />
       </div>
     );
   }
