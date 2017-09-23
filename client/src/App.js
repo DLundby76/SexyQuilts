@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Switch, Route} from 'react-router-dom'
 import './App.css';
 import Home from './home/homePage.js';
-import Carousel from './components/carouselComponent/index.js';
-import Footer from './components/footer/index.js';
-var homeStyles = {
-  backgroundColor: 'blue',
+import About from './about';
+import Navbar from './components/navbar';
 
-}
+
 class App extends Component {
     constructor(props){
       super(props);
@@ -16,26 +14,17 @@ class App extends Component {
       }
     }
     componentDidMount(){
-      fetch('/users')
-      .then(res => res.json())
-      .then(users => this.setState({
-        users: users
-      }))
+
     }
   render() {
     return (
       <div className="App">
-        <div  className="jumbotron" style={homeStyles}>
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to sexy quilt bitches! Boo yaaaa</h2>
-        </div>
-        {this.state.users.map(user =>
-        <div key={user.id}>
-          {user.username}
+        <Navbar/>
+        <Switch>
+          <Route exact path='/' component={Home}/>
+          <Route path='/about' component={About}/>
+        </Switch>
 
-        </div>)}
-        <Carousel />
-        <Footer />
       </div>
     );
   }
