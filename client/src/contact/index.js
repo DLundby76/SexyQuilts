@@ -8,7 +8,10 @@ class Contact extends Component {
   submit() {
     fetch('/mailgun/newsLetter', {
       method: 'post',
-      body: 'Hello World'
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify({name: 'tina', email: 'dlundby@hotmail.com'})
     }).then(() => {
       console.log('success sent');
     })

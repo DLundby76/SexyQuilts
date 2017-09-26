@@ -3,7 +3,7 @@ const newsLetterList = 'newsletter@sandboxf89729470f2f447e8dd663fd7115d50c.mailg
 const list = mailgun.lists(newsLetterList)
 
 
-module.exports = () => {
+module.exports = (function() {
 function newsLetterSignup(formData) {
   const { name, email } = formData;
   const subscriber = {
@@ -26,4 +26,4 @@ function modelSignup(formData) {
 return {
   newsLetterSignup
 }
-}
+}())
