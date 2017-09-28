@@ -1,11 +1,12 @@
 import React from 'react';
+import { styles } from './forms_style'
 
 export const NewsLetterForm = (props) => {
   return (
     <div>
       <form onSubmit={props.handleSubmit}>
       <div className="form-group">
-        <label htmlFor="exampleInputEmail1">Email address</label>
+        <label htmlFor="exampleInputEmail1" style={styles.newsLetter.text}>Email address</label>
         <input
           type="email"
           className="form-control"
@@ -33,7 +34,7 @@ export const NewsLetterForm = (props) => {
           className="form-control"
           id="lastNameInput"
           value={props.lastName}
-          onChange={props.handleLastName} 
+          onChange={props.handleLastName}
           placeholder="Last Name"/>
       </div>
       <button type="submit" className="btn btn-default">Submit</button>

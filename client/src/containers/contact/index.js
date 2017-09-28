@@ -17,18 +17,18 @@ class Contact extends Component {
   submit(e) {
     e.preventDefault()
     console.log('this is the state', this.state);
-    // fetch('/mailchimp/newsLetter', {
-    //   method: 'post',
-    //   headers: {
-    //     'content-type': 'application/json'
-    //   },
-    //   body: JSON.stringify({name: 'tina', email: 'dlundby@hotmail.com'})
-    // }).then(() => {
-    //   console.log('success sent');
-    // })
-    // .catch((err) => {
-    //   console.log('failed sending');
-    // })
+    fetch('/mailchimp/newsLetter', {
+      method: 'post',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(this.state)
+    }).then(() => {
+      console.log('success sent');
+    })
+    .catch((err) => {
+      console.log('failed sending');
+    })
   }
   handleEmail(e) {
     console.log('handleEmail', e.target.value);
@@ -36,9 +36,10 @@ class Contact extends Component {
 
   }
   handleFirstName(e) {
-
+    this.setState({ firstName: e.target.value})
   }
   handleLastName(e) {
+    this.setState({ lastName: e.target.value})
 
   }
   render() {
@@ -50,6 +51,8 @@ class Contact extends Component {
         <NewsLetterForm
           handleSubmit={this.submit}
           handleEmail={this.handleEmail}
+          handleFirstName={this.handleFirstName}
+          handleLastName={this.handleLastName}
         />
       </div>
 
