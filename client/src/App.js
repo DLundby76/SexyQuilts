@@ -3,6 +3,8 @@ import { Switch, Route} from 'react-router-dom'
 import './App.css';
 import Home from './home/homePage.js';
 import About from './about';
+import Shop from './shop';
+import Contact from './contact';
 import Navbar from './components/navbar';
 
 
@@ -22,7 +24,9 @@ class App extends Component {
         <Navbar/>
         <Switch>
           <Route exact path='/' component={Home}/>
-          <Route path='/about' component={About}/>
+          <Route  exact path='/about' component={About}/>
+          <Route exact path='/shop' component={Shop}/>
+          <Route exact path='/contact' component={Contact}/>
         </Switch>
 
       </div>

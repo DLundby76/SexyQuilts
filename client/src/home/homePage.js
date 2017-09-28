@@ -5,6 +5,7 @@ import logo from '../logo.svg';
 
 var homeStyles = {
   backgroundColor: 'blue',
+  color: 'white',
 
 }
 
