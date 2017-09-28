@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 class Contact extends Component {
+
   constructor() {
     super();
     this.submit = this.submit.bind(this);
@@ -25,6 +26,7 @@ class Contact extends Component {
         <p>
           hello this is our contact page.
         </p>
+
         <button onClick={this.submit}>test mailchimp</button>
       </div>
 
