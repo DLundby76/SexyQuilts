@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Switch, Route} from 'react-router-dom'
 import './App.css';
-import Home from './home/homePage.js';
-import About from './about';
-import Shop from './shop';
-import Contact from './contact';
+import Home from './containers/home/homePage.js';
+import About from './containers/about';
+import Shop from './containers/shop';
+import Contact from './containers/contact';
 import Navbar from './components/navbar';
 
 

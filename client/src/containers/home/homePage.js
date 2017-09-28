@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Carousel from '../components/carouselComponent/index.js';
-import Footer from '../components/footer/index.js';
-import logo from '../logo.svg';
+import Carousel from '../../components/carouselComponent/index.js';
+import Footer from '../../components/footer/index.js';
+import logo from '../../logo.svg';
 
 var homeStyles = {
   backgroundColor: 'blue',
