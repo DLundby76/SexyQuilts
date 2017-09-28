@@ -4,7 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-const newsLetter = require('./routes/mailgun');
+const newsLetter = require('./routes/mailchimp');
 
 
 var index = require('./routes/index');
@@ -26,7 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
-app.use('/mailgun', newsLetter);
+app.use('/mailchimp', newsLetter);
 
 
 // catch 404 and forward to error handler

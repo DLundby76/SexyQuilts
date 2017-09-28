@@ -6,7 +6,7 @@ class Contact extends Component {
     this.submit = this.submit.bind(this);
   }
   submit() {
-    fetch('/mailgun/newsLetter', {
+    fetch('/mailchimp/newsLetter', {
       method: 'post',
       headers: {
         'content-type': 'application/json'
@@ -25,7 +25,7 @@ class Contact extends Component {
         <p>
           hello this is our contact page.
         </p>
-        <button onClick={this.submit}>test mailgun</button>
+        <button onClick={this.submit}>test mailchimp</button>
       </div>
 
     );
