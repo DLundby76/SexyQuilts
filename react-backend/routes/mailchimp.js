@@ -15,7 +15,16 @@ router.post('/newsLetter', (req, res) => {
     console.log('error', err);
   })
 })
-router.post('/model_sign_up', (req, res) => {
+router.post('/modelSignup', (req, res) => {
   console.log(' WHAT IS OUR REQ on model_sign_up????', req.body);
+  mailchimp.modelSignup(req.body)
+  .then((result) => {
+    console.log('mailchimp success', result);
+    res.sendStatus(200)
+  })
+  .catch((err) => {
+    res.send(500);
+    console.log('error', err);
+  })
 })
 module.exports = router;

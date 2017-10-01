@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {NewsLetterForm} from '../../components/forms'
+import {NewsLetterForm} from '../../components/forms';
+import {ModelForm} from '../../components/modelForm';
 
 class Contact extends Component {
   constructor() {
@@ -10,12 +11,14 @@ class Contact extends Component {
       lastName: ''
     }
     this.submit = this.submit.bind(this);
+    this.modelSubmit = this.modelSubmit.bind(this);
     this.handleEmail = this.handleEmail.bind(this);
     this.handleFirstName = this.handleFirstName.bind(this);
     this.handleLastName = this.handleLastName.bind(this);
   }
   submit(e) {
     e.preventDefault()
+    console.log('news letter Submit');
     console.log('this is the state', this.state);
     fetch('/mailchimp/newsLetter', {
       method: 'post',
@@ -30,6 +33,26 @@ class Contact extends Component {
       console.log('failed sending');
     })
   }
+
+  modelSubmit(e) {
+    e.preventDefault()
+    console.log('modelSubmit');
+    console.log('this is the state', this.state);
+    fetch('/mailchimp/modelSignup', {
+      method: 'post',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(this.state)
+    }).then(() => {
+      console.log('success sent');
+    })
+    .catch((err) => {
+      console.log('failed sending');
+    })
+  }
+
+
   handleEmail(e) {
     console.log('handleEmail', e.target.value);
     this.setState({ email: e.target.value})
@@ -44,18 +67,32 @@ class Contact extends Component {
   }
   render() {
     return (
-      <div>
-        <p>
-          hello this is our contact page.
-        </p>
-        <NewsLetterForm
-          handleSubmit={this.submit}
-          handleEmail={this.handleEmail}
-          handleFirstName={this.handleFirstName}
-          handleLastName={this.handleLastName}
-        />
-      </div>
+      <div className='container'>
+        <div className='row'>
+          <div className='col-xs-12'>
+            <h1>Contact Page</h1>
+          </div>
+        </div>
+        <div className="row">
+          <div className='col-md-6'>
+            <NewsLetterForm
+              handleSubmit={this.submit}
+              handleEmail={this.handleEmail}
+              handleFirstName={this.handleFirstName}
+              handleLastName={this.handleLastName}
+            />
+          </div>
 
+          <div className='col-md-6'>
+            <ModelForm
+              handleSubmit={this.modelSubmit}
+              handleEmail={this.handleEmail}
+              handleFirstName={this.handleFirstName}
+              handleLastName={this.handleLastName}
+            />
+          </div>
+        </div>
+      </div>
     );
   }
 }
