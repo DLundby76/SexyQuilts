@@ -5,6 +5,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
 const newsLetter = require('./routes/mailchimp');
 
 
@@ -12,6 +13,9 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+
+mongoose.Promise = Promise;
+var Order = require("./db/models/orders.js");
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -24,6 +28,20 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+mongoose.connect("mongodb://localhost/sexyquiltsdb");
+// Hook mongoose connection to db
+var db = mongoose.connection;
+
+// Log any mongoose errors
+db.on("error", function(error) {
+  console.log("Mongoose Error: ", error);
+});
+
+// Log a success message when we connect to our mongoDB collection with no issues
+db.once("open", function() {
+  console.log("Mongoose connection successful.");
+});
 
 app.use('/', index);
 app.use('/users', users);
