@@ -28,7 +28,7 @@ export const NewsLetterForm = (props) => {
         />
       </div>
       <div className="form-group">
-        <label htmlFor="exampleInputPassword1">First Name</label>
+        <label htmlFor="exampleInputPassword1">Last Name</label>
         <input
           type="text"
           className="form-control"
