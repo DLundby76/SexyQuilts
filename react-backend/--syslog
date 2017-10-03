@@ -581,3 +581,8 @@
 2017-10-03T16:57:06.595-0600 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true } numYields:0 reslen:189 locks:{} protocol:op_query 0ms
 2017-10-03T16:57:11.602-0600 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true } numYields:0 reslen:189 locks:{} protocol:op_query 0ms
 2017-10-03T16:57:16.604-0600 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true } numYields:0 reslen:189 locks:{} protocol:op_query 0ms
+2017-10-03T16:57:21.610-0600 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true } numYields:0 reslen:189 locks:{} protocol:op_query 0ms
+2017-10-03T16:57:26.614-0600 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true } numYields:0 reslen:189 locks:{} protocol:op_query 0ms
+2017-10-03T16:57:31.615-0600 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true } numYields:0 reslen:189 locks:{} protocol:op_query 0ms
+2017-10-03T16:57:36.622-0600 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true } numYields:0 reslen:189 locks:{} protocol:op_query 0ms
+2017-10-03T16:57:41.623-0600 I COMMAND  [conn1] command admin.$cmd command: isMaster { ismaster: true } numYields:0 reslen:189 locks:{} protocol:op_query 0ms
