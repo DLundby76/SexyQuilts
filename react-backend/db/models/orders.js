@@ -15,22 +15,22 @@ var OrderSchema = new Schema({
     backing: {
         type: String,
         trim: true,
-    }
+    },
     customerName: {
         type: String,
         trim: true,
-    }
+    },
     customerAddress: {
         type: String,
         trim: true,
-    }
+    },
     customerEmail: {
         type: String,
         trim: true,
-    }
+    },
     orderNumber: {
         type: Number
-    }
+    },
 });
 
 var Order = mongoose.model("Order", OrderSchema);
