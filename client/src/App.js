@@ -6,6 +6,7 @@ import About from './containers/about';
 import Shop from './containers/shop';
 import Contact from './containers/contact';
 import Navbar from './components/navbar';
+import Checkout from './containers/checkout';
 
 
 class App extends Component {
@@ -27,6 +28,7 @@ class App extends Component {
           <Route  exact path='/about' component={About}/>
           <Route exact path='/shop' component={Shop}/>
           <Route exact path='/contact' component={Contact}/>
+          <Route exact path='/checkout' component={Checkout}/>
         </Switch>
 
       </div>
