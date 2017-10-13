@@ -1,9 +1,28 @@
 import React, { Component } from 'react';
 import './carousel.css';
+import InstaImage from '../image';
 
 class Carousel extends Component {
     constructor(props) {
       super(props)
+      this.state = {
+        instaphotos: []
+      }
+    }
+    componentDidMount() {
+      fetch('/photos/instagram')
+      .then((data)=> data.json())
+      .then((results)=> {
+        console.log(JSON.parse(results));
+        const { data } = JSON.parse(results)
+        this.setState({
+          instaphotos: data
+        })
+
+      })
+      .catch((err) => {
+        console.log(err);
+      })
     }
 
 
@@ -21,7 +40,16 @@ class Carousel extends Component {
 
               {/* <!-- Wrapper for slides --> */}
               <div className="carousel-inner">
-                <div className="item active">
+                {this.state.instaphotos.map((instaphoto,i)=>{
+                  return(
+                    <InstaImage
+                      key={instaphoto.id}
+                      insta={instaphoto}
+                      index={i}
+                  />
+                  )
+                })}
+                {/* <div className="item active">
                   <img src="/assets/images/iowa-quilt.JPG" alt="" />
                   <div className="carousel-caption" >
 
@@ -38,7 +66,7 @@ class Carousel extends Component {
                   <div className="carousel-caption">
 
                   </div>
-                </div>
+                </div> */}
 
               </div>
 

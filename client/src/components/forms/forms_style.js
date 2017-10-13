@@ -1,11 +1,11 @@
-export const styles = {
-  newsLetter: {
-    text: {
-      color: 'red'
-    }
-
-  },
-  model:{
-
-  }
-}
+// export const styles = {
+//   newsLetter: {
+//     text: {
+//       color: 'red'
+//     }
+//
+//   },
+//   model:{
+//
+//   }
+// }

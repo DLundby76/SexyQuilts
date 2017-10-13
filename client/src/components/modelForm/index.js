@@ -1,12 +1,13 @@
 import React from 'react';
-import { styles } from '../forms/forms_style'
+// import { styles } from '../forms/forms_style'
+import { styles } from './model_form.css'
 
 export const ModelForm = (props) => {
   return (
-    <div>
+    <div className='model id=model_form'>
       <form onSubmit={props.handleSubmit}>
       <div className="form-group">
-        <label htmlFor="exampleInputEmail1" style={styles.newsLetter.text}>Email address</label>
+        <label htmlFor="exampleInputEmail1">Email address</label>
         <input
           type="email"
           className="form-control"
