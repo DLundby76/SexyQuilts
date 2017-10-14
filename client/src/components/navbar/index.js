@@ -18,6 +18,7 @@ class Navbar extends Component {
         <NavLink style={styles.navText} to='/about'>About</NavLink>
         <NavLink style={styles.navText} to='/shop'>Shop</NavLink>
         <NavLink style={styles.navText} to='/contact'>Contact</NavLink>
+        <NavLink style={styles.navText} to='/checkout'>Checkout</NavLink>
 
       </div>
 

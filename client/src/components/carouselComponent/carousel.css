@@ -1,3 +1,7 @@
 .glyphicon-chevron-left{
   color: black;
 }
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img{
+ display: inline;
+}

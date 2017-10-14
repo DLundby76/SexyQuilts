@@ -9,26 +9,34 @@ class ShopItem extends React.Component {
           <img src={this.props.quilt.image_url} style={{width: '50%'}}/>
         </div>
         <div className='col-lg-6 pull-right'>
-          <form>
-          <div className="form-group">
-            <label htmlFor="exampleInputEmail1">Email address</label>
-            <input type="email" className="form-control" id="exampleInputEmail1" placeholder="Email" />
-          </div>
-          <div className="form-group">
-            <label htmlFor="exampleInputPassword1">Password</label>
-            <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
-          </div>
-          <div className="form-group">
-            <label htmlFor="exampleInputFile">File input</label>
-            <input type="file" id="exampleInputFile" />
-            <p className="help-block">Example block-level help text here.</p>
-          </div>
-          <div className="checkbox">
-            <label>
-              <input type="checkbox" /> Check me out
-            </label>
-          </div>
-          <button type="submit" className="btn btn-default">Submit</button>
+          <form className="form-horizontal">
+            <div className="form-group">
+              <label for="size" className="col-sm-3 control-label">Size</label>
+              <div className="col-sm-6">
+                  <select className="form-control">
+                    <option>Queen size 60' x 80'</option>
+                    <option>Full Size ????</option>
+                  </select>
+              </div>
+            </div>
+            <div className="form-group">
+              <label for="backing_color" className="col-sm-3 control-label">Backing Fabric Color</label>
+              <div className="col-sm-6">
+                  <select className="form-control">
+                    <option>Red</option>
+                    <option>Orange</option>
+                    <option>Yellow</option>
+                    <option>Green</option>
+                    <option>Blue</option>
+                    <option>Purple</option>
+                    <option>White</option>
+                    <option>Black</option>
+                    <option>Grey</option>
+                  </select>
+              </div>
+            </div>
+          <button type="submit" className="btn btn-primary">Add to checkout</button>
+          <button type="submit" className="btn btn-info">Ready to checkout</button>
           </form>
         </div>
 
