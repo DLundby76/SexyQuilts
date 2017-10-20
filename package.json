@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "PORT=3001 node ./react-backend/bin/www",
+    "start": " node ./react-backend/bin/www",
     "start:server": "PORT=3001 node ./bin/www"
   },
   "dependencies": {
