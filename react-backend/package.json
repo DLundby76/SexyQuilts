@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "prestart": "mongod --fork --logpath --syslog --verbose",
     "start": "PORT=3001 node ./bin/www",
     "start:server": "PORT=3001 node ./bin/www"
   },
