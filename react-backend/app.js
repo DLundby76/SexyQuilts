@@ -17,7 +17,6 @@ var app = express();
 var quiltRouter = require('./routes/quilts');
 mongoose.Promise = Promise;
 var Order = require("./db/models/orders.js");
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -28,10 +27,10 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../client/build')));
 app.use('/photos', photoRouter);
 
-mongoose.connect("mongodb://localhost/sexyquiltsdb");
+mongoose.connect(process.env.MONGODB_URI);
 // Hook mongoose connection to db
 var db = mongoose.connection;
 
@@ -46,7 +45,7 @@ db.once("open", function() {
 });
 
 app.use('/', index);
-app.use('/users', users);
+// app.use('/users', users);
 app.use('/mailchimp', newsLetter);
 app.use('/quilts', quiltRouter)
 
