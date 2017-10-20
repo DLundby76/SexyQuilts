@@ -25,7 +25,10 @@ class CheckoutForm extends Component {
         <div className={'col-lg-6'}>
           {this.props.itemsToPurchase.purchasedItems.map((item) => {
             return (
-              <img src={item.image_url}/>
+              <div>
+                <img src={item.image_url}/>
+                <p style={{color: 'black'}}>{item.model}</p>
+            </div>
             )
           })}
         </div>
