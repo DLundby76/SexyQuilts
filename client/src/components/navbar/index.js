@@ -7,7 +7,7 @@ const styles= {
   },
   navText:{
     color:'#e12d98',
-    fontSize:'18'
+    fontSize: 18
   }
 }
 class Navbar extends Component {
@@ -16,6 +16,9 @@ class Navbar extends Component {
       <div className= 'container-fluid' style={styles.container}>
         <NavLink style={styles.navText} to='/'>Home</NavLink>
         <NavLink style={styles.navText} to='/about'>About</NavLink>
+        <NavLink style={styles.navText} to='/shop'>Shop</NavLink>
+        <NavLink style={styles.navText} to='/contact'>Contact</NavLink>
+        <NavLink style={styles.navText} to='/checkout'>Checkout</NavLink>
 
       </div>
 

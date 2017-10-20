@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import Carousel from '../components/carouselComponent/index.js';
-import Footer from '../components/footer/index.js';
-import logo from '../logo.svg';
+import Carousel from '../../components/carouselComponent/index.js';
+import Footer from '../../components/footer/index.js';
+import logo from '../../logo_final.png';
 
 var homeStyles = {
-  backgroundColor: 'blue',
+  backgroundColor: '#e12d98',
+  color: 'black',
 
 }
 
@@ -15,19 +16,19 @@ class Home extends Component {
         users:[]
       }
     }
-    componentDidMount(){
-      fetch('/users')
-      .then(res => res.json())
-      .then(users => this.setState({
-        users: users
-      }))
-    }
+    // componentDidMount(){
+    //   fetch('/users')
+    //   .then(res => res.json())
+    //   .then(users => this.setState({
+    //     users: users
+    //   }))
+    // }
   render() {
     return (
       <div>
         <div  className="jumbotron" style={homeStyles}>
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to sexy quilt bitches! Boo yaaaa</h2>
+          <h2>Not your grandmother's quilts.</h2>
         </div>
         {this.state.users.map(user =>
         <div key={user.id}>
