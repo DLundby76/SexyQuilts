@@ -23,7 +23,11 @@ class CheckoutForm extends Component {
     return (
       <div className={'col-lg-12'}>
         <div className={'col-lg-6'}>
-          Hi Bob
+          {this.props.itemsToPurchase.purchasedItems.map((item) => {
+            return (
+              <img src={item.image_url}/>
+            )
+          })}
         </div>
         <div className='col-lg-6 pull-right'>
           <form onSubmit={this.handleSubmit}>
