@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {NewsLetterForm} from '../../components/forms';
 import {ModelForm} from '../../components/modelForm';
+import { styles } from './contact.css'
 
 class Contact extends Component {
   constructor() {
@@ -70,7 +71,7 @@ class Contact extends Component {
       <div className='container'>
         <div className='row'>
           <div className='col-xs-12'>
-            <h1>Contact Page</h1>
+            <h1>Contact Us</h1>
           </div>
         </div>
         <div className="row">

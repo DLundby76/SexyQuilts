@@ -14,7 +14,7 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
-
+var quiltRouter = require('./routes/quilts');
 mongoose.Promise = Promise;
 var Order = require("./db/models/orders.js");
 
@@ -48,7 +48,7 @@ db.once("open", function() {
 app.use('/', index);
 app.use('/users', users);
 app.use('/mailchimp', newsLetter);
-
+app.use('/quilts', quiltRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

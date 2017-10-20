@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {injectStripe, CardElement} from 'react-stripe-elements';
+import './checkout.css';
 
 class CheckoutForm extends Component {
   constructor(props) {
@@ -20,10 +21,18 @@ class CheckoutForm extends Component {
   render() {
     console.log(' WHAT ARE TEH PROPS ON CHECOUT FORM', this.props);
     return (
-      <form onSubmit={this.handleSubmit}>
-        <CardElement />
-        <button type='submit'>submit</button>
-      </form>
+      <div className={'col-lg-12'}>
+        <div className={'col-lg-6'}>
+          Hi Bob
+        </div>
+        <div className='col-lg-6 pull-right'>
+          <form onSubmit={this.handleSubmit}>
+            <CardElement className='custom-stripe-element' style={{base: {fontSize: '18px' }, }}/>
+            <button type='submit'>submit</button>
+          </form>
+        </div>
+
+      </div>
 
 
     );

@@ -16,7 +16,7 @@ photoRouter.get('/instagram', (req, res) => {
     if (error) throw new Error(error);
     res.json(body)
 
-    console.log(body);
+    // console.log(body);
   });
 
 })

@@ -1,4 +1,38 @@
+.form{
+  padding: 10px;
+}
+
+
 .model{
-  border: solid;
-  border-color: black;
+  padding: 20px;
+  border-style: outset;
+  border-width: 10px;
+  border-color: #e12d98;
+}
+
+.form-group{
+  color: #e12d98;
+  font-size: 12pt;
+}
+
+.btn-default{
+  background-color: #e12d98;
+  width: 50%;
+  font-size: 12pt;
+  font-style: italic;
+}
+#modelemail{
+  background:#e7b4d2;
+  border-color: #e12d98;
+
+
+}
+#modelFirstName{
+  background:#e7b4d2;
+  border-color: #e12d98;
+}
+
+#modelLastName{
+  background:#e7b4d2;
+  border-color: #e12d98;
 }
