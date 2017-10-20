@@ -13,7 +13,7 @@ class Checkout extends Component {
       <div>
         <h1>checkout</h1>
         <Elements>
-          <CheckoutForm />
+          <CheckoutForm {...this.props}/>
         </Elements>
       </div>
 
