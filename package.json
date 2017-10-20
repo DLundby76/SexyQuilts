@@ -3,8 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": " node ./react-backend/bin/www",
-    "start:server": "PORT=3001 node ./bin/www"
+    "start": " npm run build:prod && node ./react-backend/bin/www ",
+    "start:server": "PORT=3001 node ./bin/www",
+    "build:prod": "cd client && npm run build"
+
   },
   "dependencies": {
     "body-parser": "~1.17.1",
