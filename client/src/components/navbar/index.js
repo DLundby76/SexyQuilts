@@ -3,7 +3,7 @@ import { NavLink} from 'react-router-dom';
 
 const styles= {
   container: {
-    backgroundColor:'#444'
+    backgroundColor:'black'
   },
   navText:{
     color:'#e12d98',

@@ -12,6 +12,7 @@ class About extends Component {
         <img className='daniel_image' src='/assets/images/daniel_image.jpg'/>
       </div>
       <div className='col-md-6'>
+          <h1>About</h1>
         <p>this is where my info will go</p>
       </div>
     </div>
