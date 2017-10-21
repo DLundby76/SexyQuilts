@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {NewsLetterForm} from '../../components/forms';
 import {ModelForm} from '../../components/modelForm';
 import { styles } from './contact.css'
+import Footer from '../../components/footer/index.js';
 
 class Contact extends Component {
   constructor() {
@@ -68,6 +69,7 @@ class Contact extends Component {
   }
   render() {
     return (
+    <div className='page'>
       <div className='container'>
         <div className='row'>
           <div className='col-xs-12'>
@@ -94,6 +96,9 @@ class Contact extends Component {
           </div>
         </div>
       </div>
+      <Footer />
+    </div>
+
     );
   }
 }

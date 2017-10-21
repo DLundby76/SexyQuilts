@@ -1,3 +1,11 @@
+@@font-face {
+  font-family: Sabado;
+  src: url('/assets/fonts/Sabado Regular.otf') format('opentype');
+}
+
+*{
+  font-family: Sabado;
+}
 .App {
   text-align: center;
 }
@@ -16,4 +24,15 @@
 
 .App-intro {
   font-size: large;
+}
+
+.page{
+  min-height: 100vh;
+  position: relative;
+  min-width: 100%;
+  background: url("/assets/images/background_art.png") no-repeat;
+  background-size: contain;
+
+
+
 }

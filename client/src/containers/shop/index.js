@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import ShopItem from '../../components/shopItem';
 import shopData from './shopdata';
 import { addItemToCart } from '../../actions/checkoutActions';
+import Footer from '../../components/footer/index.js';
 
 class Shop extends Component {
   constructor(props) {
@@ -52,7 +53,7 @@ class Shop extends Component {
       )
     }
     return (
-      <div>{this.state.quilts.map((quilt) =>{
+      <div className='page'>{this.state.quilts.map((quilt) =>{
         return(
           <ShopItem
             key={quilt.id}
@@ -61,7 +62,9 @@ class Shop extends Component {
             readyToCheckout={this.handleCheckout}
           />
         )
-      })}</div>
+      })}
+        <Footer />
+    </div>
 
 
 

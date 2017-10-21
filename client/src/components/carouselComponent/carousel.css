@@ -2,9 +2,20 @@
   color: black;
 }
 
+.carousel-control.left{
+  background: none;
+}
+.carousel-control.right{
+  background: none;
+}
+
 .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img{
  display: inline;
  border-color: black;
  border: 10px;
  border: solid;
+}
+
+.carousel-generic{
+  padding-bottom: 50px;
 }

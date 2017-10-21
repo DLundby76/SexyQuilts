@@ -32,11 +32,11 @@ class Carousel extends Component {
           <div className="container-fluid">
             <div id="carousel-generic" className="carousel slide" data-ride="carousel" data-interval='2000'>
               {/* <!-- Indicators --> */}
-              <ol className="carousel-indicators">
+              {/* <ol className="carousel-indicators">
                 <li data-target="#carousel-generic" data-slide-to="0" className="active"></li>
                 <li data-target="#carousel-generic" data-slide-to="1"></li>
                 <li data-target="#carousel-generic" data-slide-to="2"></li>
-              </ol>
+              </ol> */}
 
               {/* <!-- Wrapper for slides --> */}
               <div className="carousel-inner">

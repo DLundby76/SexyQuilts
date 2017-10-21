@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { styles } from './footer.css'
 
 
 class Footer extends Component{
@@ -7,7 +8,7 @@ class Footer extends Component{
   render(){
     return (
       <div className= 'footer'>
-        <h1 style= {{color: 'black'}}>crazy fucking shit!</h1>
+        <p> SexyQuilts part of the DLundby Designs LLC.</p>
 
       </div>
     )

@@ -25,7 +25,7 @@ class Home extends Component {
     // }
   render() {
     return (
-      <div>
+      <div className='page'>
         <div  className="jumbotron" style={homeStyles}>
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Not your grandmother's quilts.</h2>
