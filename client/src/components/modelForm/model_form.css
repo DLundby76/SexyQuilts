@@ -1,5 +1,6 @@
 .form{
   padding: 10px;
+
 }
 
 
@@ -8,6 +9,7 @@
   border-style: outset;
   border-width: 10px;
   border-color: #e12d98;
+  background-color: white;
 }
 
 .form-group{

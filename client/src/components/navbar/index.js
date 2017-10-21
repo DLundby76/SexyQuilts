@@ -3,17 +3,18 @@ import { NavLink} from 'react-router-dom';
 
 const styles= {
   container: {
-    backgroundColor:'black'
+    backgroundColor:'black',
+    height: '40px'
   },
   navText:{
     color:'#e12d98',
-    fontSize: 18
+    fontSize: 36
   },
   navContainer:{
     display: 'flex',
     'flex-direction': 'row',
     'justify-content' : 'space-between',
-    width: '500px',
+    width: '750px',
     'margin-right': 0,
     float: 'right'
 
