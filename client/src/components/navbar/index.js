@@ -26,7 +26,7 @@ const styles= {
 class Navbar extends Component {
   render() {
     return (
-      <div className= 'container-fluid' style={styles.container}>
+      <div className= 'container-fluid'>
         <div className='navContainer' style={styles.navContainer}>
         <NavLink style={styles.navText} to='/'>Home</NavLink>
         <NavLink style={styles.navText} to='/about'>About</NavLink>

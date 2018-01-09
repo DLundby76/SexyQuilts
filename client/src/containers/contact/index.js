@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {NewsLetterForm} from '../../components/forms';
 import {ModelForm} from '../../components/modelForm';
-import { styles } from './contact.css'
+// import { styles } from './contact.css'
 import Footer from '../../components/footer/index.js';
 
 class Contact extends Component {
