@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Carousel from '../../components/carouselComponent/index.js';
+// import Carousel from '../../components/carouselComponent/index.js';
 import Footer from '../../components/footer/index.js';
 import logo from '../../logo_final.png';
 
@@ -35,7 +35,7 @@ class Home extends Component {
           {user.username}
 
         </div>)}
-        <Carousel />
+        {/* <Carousel /> */}
         <Footer />
       </div>
     );

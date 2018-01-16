@@ -17,7 +17,7 @@ var app = express();
 var quiltRouter = require('./routes/quilts');
 mongoose.Promise = Promise;
 var Order = require("./db/models/orders.js");
-// app.use(express.static('public'));
+app.use(express.static('public'));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');

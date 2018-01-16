@@ -1,11 +1,25 @@
 /* start nav styling */
 .container-fluid{
-  background-color:'black';
-  height: '40px';
+  background-color: black;
+  height: 40px;
 
 }
 .navContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content : space-between;
+  margin-right: 0;
+  float: right;
 
 
+}
+.nav-Links{
+  color:#e12d98;
+  fontSize: 36;
+}
+
+.menu-Icon{
+  display: none;
+  float: right;
 }
 /* end nav styling */

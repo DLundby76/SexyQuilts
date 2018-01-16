@@ -28,7 +28,7 @@
 
 .page{
   min-height: 100vh;
-  position: relative;
+  /* position: relative; */
   min-width: 100%;
   background: url("/assets/images/background_art.png") no-repeat;
   background-size: contain;
@@ -36,3 +36,26 @@
 
 
 }
+
+
+/* 365X667 */
+@media only screen and (min-device-width: 365px) and (max-device-width: 667px) {
+  .navContainer .nav-Links{
+    display: none!important;
+    padding: 20px;
+    font-size: 1em;
+    border-bottom: 1px solid #e12d98;
+  }
+.menu-Icon{
+  display: block!important;
+}
+.navContainer.responsive{
+  display: block;
+  background-color: black;
+
+}
+.navContainer.responsive a{
+  display: block!important;
+}
+}
+/*  */

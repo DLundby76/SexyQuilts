@@ -1,40 +1,37 @@
 import React, { Component } from 'react';
 import { NavLink} from 'react-router-dom';
+import Menu  from 'react-icons/lib/md/menu';
+import  '../styles/style.css';
 
-const styles= {
-  container: {
-    backgroundColor:'black',
-    height: '40px'
-  },
-  navText:{
-    color:'#e12d98',
-    fontSize: 36
-  },
-  navContainer:{
-    display: 'flex',
-    'flex-direction': 'row',
-    'justify-content' : 'space-between',
-    width: '750px',
-    'margin-right': 0,
-    float: 'right'
-
-
+class Navbar extends Component {
+  constructor() {
+    super();
+    this.toggleMenu=this.toggleMenu.bind(this)
+  }
+  toggleMenu(e) {
+    const navLinks = document.getElementsByClassName('navContainer')
+    Array.from(navLinks).map(el =>{
+        console.log('our navLinks', el.className);
+        if (el.className == 'navContainer') {
+          el.className += ' responsive';
+        } else {
+          el.className = 'navContainer'
+        }
+    })
 
   }
-
-}
-class Navbar extends Component {
   render() {
     return (
       <div className= 'container-fluid'>
-        <div className='navContainer' style={styles.navContainer}>
-        <NavLink style={styles.navText} to='/'>Home</NavLink>
-        <NavLink style={styles.navText} to='/about'>About</NavLink>
-        <NavLink style={styles.navText} to='/shop'>Shop</NavLink>
-        <NavLink style={styles.navText} to='/contact'>Contact</NavLink>
-        <NavLink style={styles.navText} to='/checkout'>Checkout</NavLink>
+        <div className='navContainer'>
+        <NavLink className='nav-Links' to='/'>Home</NavLink>
+        <NavLink className='nav-Links' to='/about'>About</NavLink>
+        <NavLink className='nav-Links' to='/shop'>Shop</NavLink>
+        <NavLink className='nav-Links' to='/contact'>Contact</NavLink>
+        <NavLink className='nav-Links' to='/checkout'>Checkout</NavLink>
 
       </div>
+      <Menu className="menu-Icon" size={30} color='white' onClick={(e) => this.toggleMenu(e)}/>
     </div>
 
     );
