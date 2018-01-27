@@ -4,6 +4,7 @@ import ShopItem from '../../components/shopItem';
 import shopData from './shopdata';
 import { addItemToCart } from '../../actions/checkoutActions';
 import Footer from '../../components/footer/index.js';
+import PageLayout from '../../components/PageLayout';
 
 class Shop extends Component {
   constructor(props) {
@@ -53,6 +54,7 @@ class Shop extends Component {
       )
     }
     return (
+      <PageLayout>
       <div className='page'>{this.state.quilts.map((quilt) =>{
         return(
           <ShopItem
@@ -66,6 +68,7 @@ class Shop extends Component {
         <Footer />
     </div>
 
+  </PageLayout>
 
 
     );

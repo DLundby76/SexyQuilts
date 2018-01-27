@@ -1,11 +1,13 @@
 import React,{ Component } from 'react';
 import Carousel from '../../components/carouselComponent/index.js';
 import Footer from '../../components/footer/index.js';
+import PageLayout from '../../components/PageLayout';
 import { styles } from './about.css'
 
 class About extends Component {
   render() {
     return (
+      <PageLayout>
       <div className='page'>
         <div className='container-fluid'>
           <div className='row'>
@@ -21,6 +23,7 @@ class About extends Component {
           <Carousel />
           <Footer />
       </div>
+    </PageLayout>
 
 
 

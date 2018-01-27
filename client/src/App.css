@@ -25,6 +25,59 @@
 .App-intro {
   font-size: large;
 }
+.navContainer{
+  display: block;
+  position: fixed;
+  right: 0px;
+  background-color: black;
+  transition: right 0.5s ease-in;
+  width: 0;
+  height: 100%;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+
+}
+.navContainer a{
+  font-size: 24pt;
+}
+
+@keyframes logoColorChange {
+  0%{
+    background-color: #e12d98;
+  }
+  17%{
+    background-color: red;
+  }
+  34%{
+    background-color: orange;
+  }
+  51%{
+    background-color: green;
+  }
+  68%{
+    background-color: blue;
+  }
+  84%{
+    background-color: white;
+  }
+  100%{
+    background-color: grey;
+  }
+
+}
+
+.logo-background{
+  background-color: #e12d98;
+  color: black;
+  animation-duration: 10s;
+  animation-name: logoColorChange;
+  animation-iteration-count: infinite;
+  height: 100vh;
+
+
+}
 
 .page{
   min-height: 100vh;
@@ -39,23 +92,38 @@
 
 
 /* 365X667 */
-@media only screen and (min-device-width: 365px) and (max-device-width: 667px) {
+@media only screen and (min-width: 365px) and (max-width: 667px) {
+
   .navContainer .nav-Links{
-    display: none!important;
+    /* display: none!important; */
     padding: 20px;
     font-size: 1em;
     border-bottom: 1px solid #e12d98;
   }
 .menu-Icon{
   display: block!important;
+  right: 30.5vh;
 }
 .navContainer.responsive{
   display: block;
-  background-color: black;
+
+
 
 }
 .navContainer.responsive a{
   display: block!important;
 }
+}
+@media only screen and (min-width: 668px){
+  .navContainer {
+    position: initial;
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 668px){
+  .navContainer {
+    position: initial;
+    width: 50%;
+  }
 }
 /*  */

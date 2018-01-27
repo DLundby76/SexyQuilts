@@ -5,7 +5,6 @@ import Home from './containers/home/homePage.js';
 import About from './containers/about';
 import Shop from './containers/shop';
 import Contact from './containers/contact';
-import Navbar from './components/navbar';
 import Checkout from './containers/checkout';
 
 
@@ -22,7 +21,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navbar/>
         <Switch>
           <Route exact path='/' component={Home}/>
           <Route  exact path='/about' component={About}/>

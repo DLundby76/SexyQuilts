@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {NewsLetterForm} from '../../components/forms';
 import {ModelForm} from '../../components/modelForm';
+import PageLayout from '../../components/PageLayout';
 // import { styles } from './contact.css'
 import Footer from '../../components/footer/index.js';
 
@@ -69,6 +70,7 @@ class Contact extends Component {
   }
   render() {
     return (
+      <PageLayout>
     <div className='page'>
       <div className='container'>
         <div className='row'>
@@ -98,6 +100,7 @@ class Contact extends Component {
       </div>
       <Footer />
     </div>
+  </PageLayout>
 
     );
   }
