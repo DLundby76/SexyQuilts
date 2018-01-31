@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Footer from '../../components/footer/index.js';
 import logo from '../../logo_final.png';
 import PageLayout from '../../components/PageLayout';
@@ -30,7 +31,11 @@ class Home extends Component {
           <div  className="jumbotron logo-background">
             <img src={logo} className="App-logo" alt="logo" />
             <h2>These are not your grandmother's quilts.</h2>
+            <Link to='/shop'>
+              Ready to have some fun?
+            </Link>
           </div>
+
           {this.state.users.map(user =>
             <div key={user.id}>
               {user.username}
@@ -39,6 +44,8 @@ class Home extends Component {
 
             <Footer />
           </div>
+
+
       </PageLayout>
     );
   }

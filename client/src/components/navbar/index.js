@@ -18,7 +18,7 @@ class Navbar extends Component {
     page.addEventListener('click', () => {
       console.log('Why are WE NOT CLICKING:::::');
       if (sideNav.style.width === '250px') {
-        sideNav.style.width = '0px';
+        sideNav.removeAttribute('style');
 
       }
     })

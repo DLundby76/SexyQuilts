@@ -120,10 +120,14 @@
     width: 50%;
   }
 }
-@media only screen and (min-width: 668px){
+
+@media only screen and (min-width: 768px){
+  .navContainer .nav-Links {
+    padding: 10px;
+  }
   .navContainer {
-    position: initial;
-    width: 50%;
+    width: 100%;
+    align-items: center;
   }
 }
 /*  */
