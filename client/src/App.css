@@ -43,6 +43,10 @@
   font-size: 24pt;
 }
 
+.container-fluid{
+  padding: 0px!important;
+}
+
 @keyframes logoColorChange {
   0%{
     background-color: #e12d98;

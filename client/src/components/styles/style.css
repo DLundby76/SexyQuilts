@@ -1,9 +1,9 @@
 /* start nav styling */
-.container-fluid{
+/* .container-fluid{
   background-color: black;
   height: 40px;
 
-}
+} */
 .navContainer{
   display: flex;
   flex-direction: row;
