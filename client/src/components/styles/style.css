@@ -7,10 +7,14 @@
 .navContainer{
   display: flex;
   flex-direction: row;
-  justify-content : flex-end;
   margin-right: 0;
-  float: right;
 
+
+}
+
+.nav-links-container{
+    justify-content : flex-end;
+    float:right;
 
 }
 .nav-Links{

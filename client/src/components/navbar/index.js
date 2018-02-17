@@ -3,6 +3,24 @@ import { NavLink} from 'react-router-dom';
 import Menu  from 'react-icons/lib/md/menu';
 import  '../styles/style.css';
 
+// <nav>
+//
+//   <div classNameName= 'container-fluid'>
+//     <div classNameName='navContainer' id="sideNav">
+//       <div classNameName=' home-logo'>
+//         <NavLink classNameName='' to='/'>Home</NavLink>
+//       </div>
+//       <div classNameName='nav-links-container'>
+//         <NavLink classNameName='nav-Links' to='/shop'>Shop</NavLink>
+//         <NavLink classNameName='nav-Links' to='/contact'>Contact</NavLink>
+//         <NavLink classNameName='nav-Links' to='/checkout'>Checkout</NavLink>
+//       </div>
+//
+//     </div>
+//     <Menu classNameName="menu-Icon" id="menuIcon" size={30} color='white'/>
+//   </div>
+// </nav>
+
 class Navbar extends Component {
   constructor() {
     super();
@@ -22,17 +40,17 @@ class Navbar extends Component {
 
       }
     })
-    menuIcon.addEventListener('click',() =>{
-      console.log('We are CLICKINGTHE ICON!');
-      console.log('click', sideNav.style.width);
-      if (!sideNav.style.width || sideNav.style.width === '0px'){
-        sideNav.style.width='250px'
-        sideNav.className = 'navContainer responsive'
-
-      } else {
-        sideNav.style.width='0px'
-      }
-    })
+    // menuIcon.addEventListener('click',() =>{
+    //   console.log('We are CLICKINGTHE ICON!');
+    //   console.log('click', sideNav.style.width);
+    //   if (!sideNav.style.width || sideNav.style.width === '0px'){
+    //     sideNav.style.width='250px'
+    //     sideNav.className = 'navContainer responsive'
+    //
+    //   } else {
+    //     sideNav.style.width='0px'
+    //   }
+    // })
 
   }
   listenForResize(){
@@ -50,17 +68,28 @@ class Navbar extends Component {
   }
   render() {
     return (
-      <div className= 'container-fluid'>
-        <div className='navContainer' id="sideNav">
-        <NavLink className='nav-Links' to='/'>Home</NavLink>
-        <NavLink className='nav-Links' to='/about'>About</NavLink>
-        <NavLink className='nav-Links' to='/shop'>Shop</NavLink>
-        <NavLink className='nav-Links' to='/contact'>Contact</NavLink>
-        <NavLink className='nav-Links' to='/checkout'>Checkout</NavLink>
+      <nav className="navbar navbar-default">
+        <div className="container-fluid">
+          <div className="navbar-header">
+            <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span className="sr-only">Toggle navigation</span>
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
+            </button>
+            <a className="navbar-brand" href="#">home-logo</a>
+          </div>
 
-      </div>
-      <Menu className="menu-Icon" id="menuIcon" size={30} color='white'/>
-    </div>
+          <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul className="nav navbar-nav navbar-right">        
+              <li><NavLink classNameName='nav-Links' to='/shop'>Shop</NavLink></li>
+              <li><NavLink classNameName='nav-Links' to='/contact'>Contact</NavLink></li>
+              <li><NavLink classNameName='nav-Links' to='/checkout'>Checkout</NavLink></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
 
     );
   }

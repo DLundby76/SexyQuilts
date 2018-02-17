@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Footer from '../../components/footer/index.js';
+// import Footer from '../../components/footer/index.js';
+import Carousel from '../../components/carouselComponent/index.js';
 import logo from '../../logo_final.png';
 import PageLayout from '../../components/PageLayout';
 
@@ -27,25 +28,30 @@ class Home extends Component {
   render() {
     return (
       <PageLayout>
-        <div className='page' id="page-content">
-          <div  className="jumbotron logo-background">
+        <section className=' container-fluid' id="page-content">
+          <div  className="col-lg-6 col-sm-12 col-xs-12">
             <img src={logo} className="App-logo" alt="logo" />
             <h2>These are not your grandmother's quilts.</h2>
             <Link to='/shop'>
               Ready to have some fun?
             </Link>
           </div>
-
-          {this.state.users.map(user =>
-            <div key={user.id}>
-              {user.username}
-
-            </div>)}
-
-            <Footer />
+          <div className="col-lg-6 col-sm-12 col-xs-12">
+            Stuff and things go here
           </div>
 
+        </section>
+        <section>
+            <div  className="col-lg-6 col-sm-12 col-xs-12">
+              <Carousel />
+            </div>
+            <div className="col-lg-6 col-sm-12 col-xs-12">
+              <Carousel />
+            </div>
 
+          </section>
+
+        {/* <Footer /> */}
       </PageLayout>
     );
   }
